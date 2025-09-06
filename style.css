@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #080f10, #021454);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.time {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the units */
+    gap: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c6dedf;
+    border-radius: 15px;
+    padding: 1.5rem;
+    min-width: 150px;
+}
+
+/* This is for the number */
+.unit span:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #078098;
+    margin-bottom: 0.5rem;
+}
+
+/* This is for the label */
+.unit span:last-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .time {
+        gap: 1rem;
+    }
+
+    .unit {
+        padding: 1rem;
+        min-width: 120px;
+    }
+
+    .unit span:first-child {
+        font-size: 2.5rem;
+    }
+
+    .unit span:last-child {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .time {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .unit {
+        padding: 1rem;
+        min-width: 200px; /* Give it more width in column layout */
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .unit span:first-child {
+        font-size: 3rem;
+    }
+
+    .unit span:last-child {
+        font-size: 1rem;
+    }
+}
